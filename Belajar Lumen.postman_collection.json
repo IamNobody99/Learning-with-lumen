@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "d81577b0-ad0d-445e-a626-f803d1a10422",
+		"name": "Belajar Lumen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29098604"
+	},
+	"item": [
+		{
+			"name": "Penjualan",
+			"item": [
+				{
+					"name": "Get list penjualan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/penjualan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get list Penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/penjualan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"penjualan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 00:19:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 00:19:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"1\",\n        \"nomor\": \"SALE/00001\",\n        \"customer\": \"Joko\"\n    },\n    {\n        \"id\": \"2\",\n        \"nomor\": \"SALE/00002\",\n        \"customer\": \"Budi\"\n    },\n    {\n        \"id\": \"3\",\n        \"nomor\": \"SALE/00003\",\n        \"customer\": \"Rudi\"\n    },\n    {\n        \"id\": \"4\",\n        \"nomor\": \"SALE/00003\",\n        \"customer\": \"Rudi\"\n    },\n    {\n        \"id\": \"5\",\n        \"nomor\": \"SALE/00003\",\n        \"customer\": \"Rudi\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get detail penjualan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/penjualan/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get detail penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/penjualan/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"penjualan",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 00:24:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 00:24:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"1\",\n        \"nomor\": \"SALE/00001\",\n        \"customer\": \"Joko\",\n        \"total\": 2000000,\n        \"alamat\": \"Jakarta\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Penjualan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor\": \"SALE/00002\",\r\n    \"customer\": \"Anwar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/penjualan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomor\": \"SALE/00002\",\r\n    \"customer\": \"Anwar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/penjualan",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Berhasil\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Update penjualan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor\": \"SALE/00002\",\r\n    \"customer\": \"Anwar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/penjualan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomor\": \"SALE/00002\",\r\n    \"customer\": \"Anwar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/penjualan/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"10\",\n        \"nomor\": \"SALE/00002\",\n        \"customer\": \"Joko\",\n        \"total\": 2000000,\n        \"alamat\": \"Jakarta\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete penjualan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/penjualan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/penjualan/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:37:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Berhasil delete\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Confirm penjualan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"api_token\": \"rizal1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/penjualan/:id/confirm",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan",
+								":id",
+								"confirm"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Confirm penjualan - unaoauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/penjualan/:id/confirm",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan",
+										":id",
+										"confirm"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 01:58:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 01:58:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "X-Header-One",
+									"value": "Header Value"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						},
+						{
+							"name": "Confirm penjualan -SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"api_token\": \"rizal1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/penjualan/:id/confirm",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan",
+										":id",
+										"confirm"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 02:18:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 02:18:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Berhasil confirm\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"api_token\": \"rizal1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/penjualan/:id/send-email",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"penjualan",
+								":id",
+								"send-email"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send email -SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"api_token\": \"rizal1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/penjualan/:id/send-email",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"penjualan",
+										":id",
+										"send-email"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:35:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Oct 2023 03:35:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Berhasil kirim email\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
